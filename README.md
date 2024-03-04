@@ -1,3 +1,4 @@
+branch-b elso sora
 # új bejegyzés
 *ez egy új bejegyzés*
 ~~ez át van húzva~~
