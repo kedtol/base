@@ -63,5 +63,14 @@ public class TrainSystemTest {
 
 	}
 
+	@Test
+	public void RecordingWithTachoTable()
+	{
+		user.overrideJoystickPosition(4);
+		controller.followSpeed();
+		sensor.recordTacho(controller.getTime(), user.getJoystickPosition(), controller.getReferenceSpeed());
+		Assert.assertEquals(1, sensor.getTachoSize());
+	}
+
 	
 }

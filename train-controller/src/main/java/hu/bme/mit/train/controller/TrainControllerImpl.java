@@ -8,6 +8,7 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 	private boolean breakPosition = false;
+	private int time = 0;
 
 	@Override
 	public void followSpeed() {
@@ -27,7 +28,7 @@ public class TrainControllerImpl implements TrainController {
 		{
 			referenceSpeed = 0;
 		}
-		
+		time++;
 		enforceSpeedLimit();
 	}
 
@@ -58,6 +59,12 @@ public class TrainControllerImpl implements TrainController {
 	public void setBreaks(boolean breakPosition)
 	{
 		this.breakPosition = breakPosition;		
+	}
+
+	@Override
+	public int getTime()
+	{
+		return time;
 	}
 
 }
